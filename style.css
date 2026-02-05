@@ -281,22 +281,73 @@ footer {
   to {transform:scale(1);}
 }
 
-/* ================= MOBILE ================= */
 
-@media(max-width:768px) {
+/* ================= MOBILE FIXES ================= */
+@media (max-width: 768px) {
+
+  body {
+    overflow-x: hidden;
+  }
+
   header {
     flex-direction: column;
+    padding: 14px 18px;
+    text-align: center;
+  }
+
+  .logo {
+    height: 42px;
+  }
+
+  header h1 {
+    font-size: 20px;
+  }
+
+  .tagline {
+    font-size: 12px;
   }
 
   nav {
-    margin-top: 10px;
+    margin-top: 12px;
   }
 
-  section {
-    padding: 45px 20px;
+  nav a {
+    margin: 0 10px;
+    font-size: 14px;
+  }
+
+  .hero {
+    padding: 70px 18px;
   }
 
   .hero h2 {
-    font-size: 32px;
+    font-size: 30px;
+    line-height: 1.2;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .hero button {
+    padding: 12px 26px;
+    font-size: 14px;
+  }
+
+  section {
+    padding: 45px 18px;
+  }
+
+  .products {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .product img {
+    height: 130px;
+  }
+
+  footer {
+    font-size: 13px;
   }
 }
