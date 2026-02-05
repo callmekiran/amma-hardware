@@ -1,16 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Amma Hardware</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-<img src="LOGO.jpg" class="logo">
 
+<head>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HardwareStore",
+  "name": "Amma Hardware",
+  "image": "https://ammahardware.in/LOGO.jpg",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Chirayinkeezhu",
+    "addressRegion": "Kerala",
+    "addressCountry": "IN"
+  },
+  "telephone": "+91-9995040555",
+  "url": "https://ammahardware.in"
+}
+</script>
+
+<meta charset="UTF-8">
+<meta name="description" content="Amma Hardware in Chirayinkeezhu – Trusted hardware store since 1950. We supply cement, TMT, plywood, roofing sheets, pipes, paints and power tools at best price.">
+<meta name="keywords" content="Amma Hardware, hardware shop Chirayinkeezhu, cement, TMT, plywood, roofing sheets, pipes, paints, power tools Kerala">
+<meta name="author" content="Amma Hardware">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Amma Hardware | Trust that’s never been broken for decades</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<a href="https://wa.me/919995040555" class="whatsapp-float" target="_blank">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+</a>
 
 <header>
-  <h1>Amma Hardware</h1>
+  <div style="display:flex;align-items:center;gap:15px;">
+  <img src="LOGO.jpg" class="logo">
+  <div>
+    <h1>Amma Hardware</h1>
+    <span class="tagline">Trust that’s never been broken for decades</span>
+  </div>
+</div>
+
   <nav>
     <a href="#home">Home</a>
     <a href="#products">Products</a>
@@ -30,99 +67,111 @@
 
   <div class="products">
 
-    <div class="product" onclick="openWhatsApp()">
-      <img src="nut-bolt.png" alt="Nut & Bolt">
+    <div class="product">
+      <img src="Nut and Bolts.jpg" alt="Nut and Bolts" onclick="openPopup(this.src)">
       <h3>Nut & Bolt</h3>
     </div>
 
-    <div class="product" onclick="openWhatsApp()">
-      <img src="TMT.jpg" alt="TMT">
+    <div class="product">
+      <img src="TMT.jpg" alt="TMT Steel Bars" onclick="openPopup(this.src)">
       <h3>TMT</h3>
     </div>
 
-    <div class="product" onclick="openWhatsApp()">
-      <img src="washer.jpg" alt="Washers">
-      <h3>Steel Washers</h3>
+    <div class="product">
+      <img src="Plywood .jpg" alt="Plywood Sheets" onclick="openPopup(this.src)">
+      <h3>Plywood</h3>
     </div>
 
-    <div class="product" onclick="openWhatsApp()">
-      <img src="bolt.jpg">
-      <h3>Zinc Bolts</h3>
+    <div class="product">
+      <img src="Roofing Sheets.jpg" alt="Roofing Sheets" onclick="openPopup(this.src)">
+      <h3>Roofing Sheets</h3>
     </div>
 
-    <div class="product" onclick="openWhatsApp()">
-      <img src="nut.jpg">
-      <h3>Hex Nuts</h3>
+    <div class="product">
+      <img src="Weldmesh rolls.jpg" alt="Weldmesh Rolls" onclick="openPopup(this.src)">
+      <h3>Weldmesh</h3>
     </div>
 
-    <div class="product" onclick="openWhatsApp()">
-      <img src="screw.jpg">
-      <h3>Screws</h3>
+    <div class="product">
+      <img src="GP And Gi tubes .jpg" alt="Square Tubes" onclick="openPopup(this.src)">
+      <h3>Square Tubes</h3>
     </div>
 
-    <div class="product" onclick="openWhatsApp()">
-      <img src="pipe.jpg">
+    <div class="product">
+      <img src="PVC tubes.jpg" alt="PVC Pipes" onclick="openPopup(this.src)">
       <h3>PVC Pipes</h3>
     </div>
 
-    <div class="product" onclick="openWhatsApp()">
-      <img src="paint.jpg">
-      <h3>Paint Supplies</h3>
+    <div class="product">
+      <img src="Enamal paints.jpg" alt="Paint Products" onclick="openPopup(this.src)">
+      <h3>Paint</h3>
     </div>
 
-    <div class="product" onclick="openWhatsApp()">
-      <img src="hammer.jpg">
-      <h3>Hammers</h3>
+    <div class="product">
+      <img src="Power tools.jpg" alt="Power Tools" onclick="openPopup(this.src)">
+      <h3>Power Tools</h3>
     </div>
 
-    <div class="product" onclick="openWhatsApp()">
-      <img src="drill.jpg">
-      <h3>Power Drills</h3>
+    <div class="product">
+      <img src="Cement.jpg" alt="Cement Bags" onclick="openPopup(this.src)">
+      <h3>Cement</h3>
     </div>
 
-    <div class="product" onclick="openWhatsApp()">
-      <img src="wrench.jpg">
-      <h3>Wrenches</h3>
-    </div>
-
-    <div class="product" onclick="openWhatsApp()">
-      <img src="grinder.jpg">
-      <h3>Angle Grinder</h3>
+    <div class="product">
+      <img src="GI Coil sheets.jpg" alt="GI Coil Sheets" onclick="openPopup(this.src)">
+      <h3>GI Coil Sheets</h3>
     </div>
 
   </div>
 </section>
+
 <section id="about">
   <h2>About Us</h2>
-  <p>For over 75 years, Amma Hardware has been a cornerstone of the community. Established in 1950, we began with a simple mission: to provide our neighbors with the tools they need to build their dreams. Today, that mission remains unchanged.
-
-We understand that quality shouldn't come at a premium. That’s why we’ve spent decades perfecting the balance between high-end materials and the market's most competitive prices. From the foundation of your home to the tools in your garden, Amma Hardware is where quality meets affordability..</p>
+  <p>For over 75 years, Amma Hardware has been a cornerstone of the community. Established in 1950, we began with a simple mission: to provide our neighbors with the tools they need to build their dreams.</p>
 </section>
 
 <section id="contact">
   <h2>Contact</h2>
-  <p>Phone: 9995040555</p>
+  <p>Phone: 9995040555, 9567692555</p>
   <p>Location: Chirayinkeezhu</p>
+  <p><strong>Opening Hours</strong></p>
+  <p>Monday – Sunday: 7:30 AM – 7:30 PM</p>
 
   <div class="map">
-  <iframe 
-    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3944.4010043104895!2d76.78574981010568!3d8.653357394720974!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b05eba1953f3393%3A0x85eeba543231a64f!2sAmma%20Hardware!5e0!3m2!1sen!2sin!4v1770116012544!5m2!1sen!2sin"
-    width="100%"
-    height="300"
-    style="border:0;"
-    allowfullscreen
-    loading="lazy"
-    referrerpolicy="no-referrer-when-downgrade">
-  </iframe>
-</div>
-
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3944.4010043104895!2d76.78574981010568!3d8.653357394720974!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b05eba1953f3393%3A0x85eeba543231a64f!2sAmma%20Hardware!5e0!3m2!1sen!2sin!4v1770116012544!5m2!1sen!2sin"
+      width="100%"
+      height="300"
+      style="border:0;"
+      allowfullscreen
+      loading="lazy">
+    </iframe>
+  </div>
 </section>
 
 <footer>
   <p>© 2026 Amma Hardware</p>
 </footer>
 
-<script src="script.js"></script>
+<div id="popup" class="popup" onclick="closePopup()">
+  <span class="close">&times;</span>
+  <img id="popup-img">
+</div>
+
+<script>
+function openPopup(src) {
+  document.getElementById("popup").style.display = "flex";
+  document.getElementById("popup-img").src = src;
+}
+
+function closePopup() {
+  document.getElementById("popup").style.display = "none";
+}
+
+function openWhatsApp() {
+  window.open("https://wa.me/919995040555", "_blank");
+}
+</script>
+
 </body>
 </html>
-
