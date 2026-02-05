@@ -134,6 +134,17 @@ section h2 {
   letter-spacing: -0.6px;
   margin-bottom: 45px;
 }
+section {
+  opacity: 0;                      /* start hidden */
+  animation: fadeInSection .6s ease forwards;
+}
+
+/* Optional: stagger slightly for each section */
+section:nth-of-type(1)  { animation-delay: 0s; }
+section:nth-of-type(2)  { animation-delay: 0.15s; }
+section:nth-of-type(3)  { animation-delay: 0.30s; }
+section:nth-of-type(4)  { animation-delay: 0.45s; }
+
 
 /* ================= PRODUCTS ================= */
 
@@ -351,3 +362,115 @@ footer {
     font-size: 13px;
   }
 }
+
+/* tiny fade-in for sections */
+@keyframes fadeInSection {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.brands {
+  background: #ffffff;
+  padding: 70px 30px;
+  text-align: center;
+}
+
+.brands h2 {
+  font-size: 34px;
+  margin-bottom: 35px;
+  letter-spacing: -0.5px;
+}
+
+.brand-strip {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 45px;
+  align-items: center;
+}
+
+.brand-strip img {
+  height: 70px;
+  filter: grayscale(100%);
+  opacity: .7;
+  transition: .35s ease;
+}
+
+.brand-strip img:hover {
+  filter: grayscale(0);
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+@media(max-width:768px) {
+  .brand-strip img {
+    height: 55px;
+  }
+}
+.brands {
+  background: #fff;
+  padding: 70px 30px;
+  overflow: hidden;
+  text-align: center;
+}
+
+.brands h2 {
+  font-size: 34px;
+  margin-bottom: 40px;
+}
+
+.brand-slider {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.brand-track {
+  display: flex;
+  width: max-content;
+  animation: scrollBrands 22s linear infinite;
+}
+
+.brand-track img {
+  height: 70px;
+  margin: 0 45px;
+  filter: grayscale(100%);
+  opacity: .75;
+  transition: .3s ease;
+}
+
+.brand-track img:hover {
+  filter: grayscale(0);
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.brand-slider:hover .brand-track {
+  animation-play-state: paused;
+}
+
+@keyframes scrollBrands {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@media(max-width:768px) {
+  .brand-track img {
+    height: 45px;
+    margin: 0 25px;
+  }
+}
+/* ===================== */
+/* FADE-IN ON SCROLL */
+/* ===================== */
+
+.fade-section {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity .8s ease, transform .8s ease;
+}
+
+.fade-section.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+

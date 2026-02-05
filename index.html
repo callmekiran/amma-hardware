@@ -34,6 +34,21 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
+<script>
+const fadeSections = document.querySelectorAll('.fade-section');
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show');
+    }
+  });
+}, { threshold: 0.15 });
+
+fadeSections.forEach(section => {
+  observer.observe(section);
+});
+</script>
 
 <body>
 
@@ -58,13 +73,13 @@
   </nav>
 </header>
 
-<section id="home" class="hero">
+<section id="home" class="hero fade-section">
   <h2>Welcome to Amma Hardware</h2>
   <p>Best quality products at best price.</p>
   <button onclick="openWhatsApp()">Order on WhatsApp</button>
 </section>
 
-<section id="products">
+<section id="products" class="fade-section">
   <h2>Our Products</h2>
 
   <div class="products">
@@ -127,12 +142,12 @@
   </div>
 </section>
 
-<section id="about">
+<section id="about" class="fade-section">
   <h2>About Us</h2>
   <p>For over 75 years, Amma Hardware has been a cornerstone of the community. Established in 1950, we began with a simple mission: to provide our neighbors with the tools they need to build their dreams.</p>
 </section>
 
-<section id="contact">
+<section id="contact" class="fade-section">
   <h2>Contact</h2>
   <p>Phone: 9995040555, 9567692555</p>
   <p>Location: Chirayinkeezhu</p>
@@ -150,6 +165,30 @@
     </iframe>
   </div>
 </section>
+
+<section class="brands fade-section">
+  <h2>Brands We Deal With</h2>
+
+  <div class="brand-slider">
+    <div class="brand-track">
+      <img src="Asian Paints.webp" alt="Asian Paints">
+      <img src="Dewalt.webp" alt="DeWalt">
+      <img src="Freemans.webp" alt="Freemans">
+      <img src="Godrej.webp" alt="Godrej">
+      <img src="Ramco Cements.webp" alt="Ramco">
+      <img src="Apollo Tubes.webp" alt="Apollo">
+
+      <!-- duplicate for smooth loop -->
+      <img src="Asian Paints.webp" alt="Asian Paints">
+      <img src="Dewalt.webp" alt="DeWalt">
+      <img src="Freemans.webp" alt="Freemans">
+      <img src="Godrej.webp" alt="Godrej">
+      <img src="Ramco Cements.webp" alt="Ramco">
+      <img src="Apollo Tubes.webp" alt="Apollo">
+    </div>
+  </div>
+</section>
+
 
 <footer>
   <p>© 2026 Amma Hardware</p>
