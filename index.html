@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <script type="application/ld+json">
@@ -21,11 +22,9 @@
 }
 </script>
 
-<meta charset="UTF-8">
 <meta name="description" content="Amma Hardware in Chirayinkeezhu – Trusted hardware store since 1950. We supply cement, TMT, plywood, roofing sheets, pipes, paints and power tools at best price.">
 <meta name="keywords" content="Amma Hardware, hardware shop Chirayinkeezhu, cement, TMT, plywood, roofing sheets, pipes, paints, power tools Kerala">
 <meta name="author" content="Amma Hardware">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Amma Hardware | Trust that’s never been broken for decades</title>
 
@@ -34,21 +33,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
-<script>
-const fadeSections = document.querySelectorAll('.fade-section');
-
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('show');
-    }
-  });
-}, { threshold: 0.15 });
-
-fadeSections.forEach(section => {
-  observer.observe(section);
-});
-</script>
 
 <body>
 
@@ -58,12 +42,12 @@ fadeSections.forEach(section => {
 
 <header>
   <div style="display:flex;align-items:center;gap:15px;">
-  <img src="LOGO.jpg" class="logo">
-  <div>
-    <h1>Amma Hardware</h1>
-    <span class="tagline">Trust that’s never been broken for decades</span>
+    <img src="LOGO.jpg" class="logo">
+    <div>
+      <h1>Amma Hardware</h1>
+      <span class="tagline">Trust that’s never been broken for decades</span>
+    </div>
   </div>
-</div>
 
   <nav>
     <a href="#home">Home</a>
@@ -178,7 +162,6 @@ fadeSections.forEach(section => {
       <img src="Ramco Cements.webp" alt="Ramco">
       <img src="Apollo Tubes.webp" alt="Apollo">
 
-      <!-- duplicate for smooth loop -->
       <img src="Asian Paints.webp" alt="Asian Paints">
       <img src="Dewalt.webp" alt="DeWalt">
       <img src="Freemans.webp" alt="Freemans">
@@ -188,7 +171,6 @@ fadeSections.forEach(section => {
     </div>
   </div>
 </section>
-
 
 <footer>
   <p>© 2026 Amma Hardware</p>
@@ -200,18 +182,39 @@ fadeSections.forEach(section => {
 </div>
 
 <script>
-function openPopup(src) {
-  document.getElementById("popup").style.display = "flex";
-  document.getElementById("popup-img").src = src;
-}
+document.addEventListener("DOMContentLoaded", () => {
 
-function closePopup() {
-  document.getElementById("popup").style.display = "none";
-}
+  const fadeSections = document.querySelectorAll('.fade-section');
 
-function openWhatsApp() {
-  window.open("https://wa.me/919995040555", "_blank");
-}
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+      }
+    });
+  }, { threshold: 0.15 });
+
+  fadeSections.forEach(section => observer.observe(section));
+
+  window.openPopup = function(src) {
+    document.getElementById("popup").style.display = "flex";
+    document.getElementById("popup-img").src = src;
+  };
+
+  window.closePopup = function() {
+    document.getElementById("popup").style.display = "none";
+  };
+
+  document.querySelector(".popup .close").addEventListener("click", e => {
+    e.stopPropagation();
+    closePopup();
+  });
+
+  window.openWhatsApp = function() {
+    window.open("https://wa.me/919995040555", "_blank");
+  };
+
+});
 </script>
 
 </body>
