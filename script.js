@@ -40,3 +40,26 @@ popup.addEventListener("click", e => {
     popup.style.display = "none";
   }
 });
+// ===============================
+// SCROLL REVEAL ANIMATION
+// ===============================
+
+const reveals = document.querySelectorAll("section, .product, .brand-slider img");
+
+reveals.forEach(el => el.classList.add("reveal"));
+
+function revealOnScroll() {
+  reveals.forEach(el => {
+    const windowHeight = window.innerHeight;
+    const elementTop = el.getBoundingClientRect().top;
+    const elementVisible = 120;
+
+    if (elementTop < windowHeight - elementVisible) {
+      el.classList.add("active");
+    }
+  });
+}
+
+window.addEventListener("scroll", revealOnScroll);
+window.addEventListener("load", revealOnScroll);
+
